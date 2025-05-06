@@ -3,6 +3,8 @@ print("Lab 3 - Software Unit Testing with PyTest")
 SORT_ASCENDING = 0
 SORT_DESCENDING = 1
 
+def bubble_float(arr, sorting_order):
+    return any(isinstance(i, float) for i in arr)
 
 def bubble_sort(arr, sorting_order):
 
@@ -33,14 +35,23 @@ def bubble_sort(arr, sorting_order):
                 else:
                     # Return an empty array
                     arr_result = []
-    else:
-        arr_result = -1
+                    return 0
+    elif n >=10 :
+        arr_result = 1
+    elif n == 0 :
+        arr_result = 0
+
 
     return arr_result
 
 def main():
     # Driver code to test above
     arr = [64, 34, 25, 12, 22, 11, 90]
+    if bubble_float(arr, SORT_ASCENDING) ==1 :
+        arr_result = 2
+        return 
+    
+    
 
     # Sort in ascending order
     result = bubble_sort(arr, SORT_ASCENDING)
