@@ -37,9 +37,9 @@ def bubble_sort(arr, sorting_order):
                     arr_result = []
                     return 0
     elif n >=10 :
-        arr_result = 1
+        return 1 
     elif n == 0 :
-        arr_result = 0
+        return 0
 
 
     return arr_result

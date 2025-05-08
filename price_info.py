@@ -7,9 +7,10 @@ quantity_list= {'apple': 5, 'orange':5, 'watermelon': 1, 'pineapple': 2, 'pear' 
 def total_cost_shopping():
     total_cost = 0
     for key in price_list.keys():
+       
         if key in quantity_list:
-            # complete the implementation below:
-
+            total_cost += price_list[key] * quantity_list[key]
+            
     print("total cost = ", total_cost)
 
 
@@ -17,15 +18,24 @@ def cost_of_fruits(fruit, quantity):
     for key in price_list.keys():
         if key == fruit:
             cost = quantity*price_list[key]
-            break
+            print("cost of ", quantity, fruit, "=", cost)
+            return cost
 
-    print("cost of ", quantity, fruit, "=", cost)
+   
 
 
 def main():
 
-    cost_of_fruits('apple', 10)
+    cost_of_fruits('apple', 5)
+    cost_of_fruits('orange', 5)
+    cost_of_fruits('watermelon', 1)
+    cost_of_fruits('pineapple', 2)
+    cost_of_fruits('pear', 10)
+    cost_of_fruits('papaya', 1)
+    cost_of_fruits('pomegranate', 2)
+   
     total_cost_shopping()
+    
 
 
 if __name__ == "__main__":
